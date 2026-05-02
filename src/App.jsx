@@ -9,6 +9,7 @@ export const Todo = () => {
   const [todoText, setTodoText] = useState("");
   const [incompleteTodos, setIncompleteTodos] = useState(["Todo1", "Todo2"]);
   const [completeTodos, setCompleteTodos] = useState(["Todoでした1", "Todoでした2"]);
+
   const onChangeText = (e) => setTodoText(e.target.value);
   const onClickAdd = () => {
     if (todoText === "") return;
