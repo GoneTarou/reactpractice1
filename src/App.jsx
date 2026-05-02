@@ -41,7 +41,10 @@ export const Todo = () => {
 
   return (
     <div>
-      <InputTodo todoText={todoText} onChange={onChangeText} onClick={onClickAdd} />
+      <InputTodo todoText={todoText} onChange={onChangeText} onClick={onClickAdd} disabled={incompleteTodos.length >= 2} />
+      {incompleteTodos.length >= 2 && (
+        <p style={{ color: "red" }}>surti</p>
+      )}
       <IncompleteTodo todos={incompleteTodos} onClickComplete={onClickComplete} onClickDelete={onClickDelete} />
       <CompleteTodo completeTodos={completeTodos} onClickBack={onClickBack} />
     </div>
