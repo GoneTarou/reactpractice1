@@ -26,6 +26,15 @@ export const Todo = () => {
     setCompleteTodos(newCompleteTodos);
   };
 
+  const onClickBack = (index) => {
+    const newCompleteTodos = [...completeTodos];
+    newCompleteTodos.splice(index,1);
+
+    const newIncompleteTodos = [...incompleteTodos, completeTodos[index]];
+    setCompleteTodos(newCompleteTodos);
+    setIncompleteTodos(newIncompleteTodos);
+  };
+
   return (
     <div>
       <div>
@@ -50,12 +59,11 @@ export const Todo = () => {
       <div>
         <p>完了のTodo</p>
         <ul>
-          {completeTodos.map((todo) => (
+          {completeTodos.map((todo,index) => (
               <li key={todo}>
                 <div className='list-row'>
                   <p className='todo-item'>{todo}</p>
-                  <button>完了</button>
-                  <button>削除</button>
+                  <button onClick={() => onClickBack(index)}>戻す</button>
                 </div>
               </li>
             ))}
