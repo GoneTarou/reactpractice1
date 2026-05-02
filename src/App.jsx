@@ -2,6 +2,7 @@ import './App.css'
 import { useState } from 'react';
 import { InputTodo } from './components/InputTodo';
 import { IncompleteTodo } from './components/IncompleteTodo';
+import { CompleteTodo } from './components/CompleteTodo';
 
 
 export const Todo = () => {
@@ -41,19 +42,7 @@ export const Todo = () => {
     <div>
       <InputTodo todoText={todoText} onChange={onChangeText} onClick={onClickAdd} />
       <IncompleteTodo todos={incompleteTodos} onClickComplete={onClickComplete} onClickDelete={onClickDelete} />
-      <div className='input-area'>
-        <p>完了のTodo</p>
-        <ul>
-          {completeTodos.map((todo,index) => (
-              <li key={todo}>
-                <div className='list-row'>
-                  <p className='todo-item'>{todo}</p>
-                  <button onClick={() => onClickBack(index)}>戻す</button>
-                </div>
-              </li>
-            ))}
-        </ul>
-      </div>
+      <CompleteTodo completeTodos={completeTodos} onClickBack={onClickBack} />
     </div>
   )
 };
