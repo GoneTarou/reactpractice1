@@ -3,13 +3,16 @@ import { useState } from 'react';
 
 
 export const Todo = () => {
+  const [todoText, setTodoText] = useState("");
   const [incompleteTodos, setIncompleteTodos] = useState(["Todo1", "Todo2"]);
   const [completeTodos, setCompleteTodos] = useState(["Todoでした1", "Todoでした2"]);
+  const onChangeText = (event) => setTodoText(event.target.value);
+
   return (
     <div>
       <div>
         <h1>Todo App</h1>
-        <input placeholder="Todoを入力" />
+        <input placeholder="Todoを入力" value={todoText} onChange={onChangeText}/>
         <button>追加</button>
       </div>
       <div>
