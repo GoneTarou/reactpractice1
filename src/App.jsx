@@ -1,5 +1,6 @@
 import './App.css'
 import { useState } from 'react';
+import { InputTodo } from './components/InputTodo';
 
 
 export const Todo = () => {
@@ -37,11 +38,7 @@ export const Todo = () => {
 
   return (
     <div>
-      <div>
-        <h1>Todo App</h1>
-        <input placeholder="Todoを入力" value={todoText} onChange={onChangeText}/>
-        <button onClick={onClickAdd}>追加</button>
-      </div>
+      <InputTodo todoText={todoText} onChange={onChangeText} onClick={onClickAdd}/>
       <div>
         <p>未完了のTodo</p>
         <ul>
