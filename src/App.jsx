@@ -10,10 +10,6 @@ export const App = () => {
 
   const onClickOpen = () => setOpen(!open);
 
-  const onClickCountUp = () => {
-    setCount(count + 1);
-  }
-
   return (
     <div className='App'>
       <input value={text} onChange={onChangeText} />
