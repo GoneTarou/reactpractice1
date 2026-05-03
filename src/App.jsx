@@ -10,13 +10,15 @@ export const App = () => {
 
   const onClickOpen = () => setOpen(!open);
 
+  const onClickClose = () => setOpen(false);
+
   return (
     <div className='App'>
       <input value={text} onChange={onChangeText} />
       <br />
       <br />
       <button onClick={onClickOpen}>countup</button>
-      <ChildArea open={open}/>
+      <ChildArea open={open} onClickClose={onClickClose}/>
     </div>
   )
 };
