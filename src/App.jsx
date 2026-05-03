@@ -1,5 +1,5 @@
 import './App.css'
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { ChildArea } from './ChildArea';
 
 export const App = () => {
@@ -10,7 +10,7 @@ export const App = () => {
 
   const onClickOpen = () => setOpen(!open);
 
-  const onClickClose = () => setOpen(false);
+  const onClickClose = useCallback(() => setOpen(false), [setOpen]);
 
   return (
     <div className='App'>
