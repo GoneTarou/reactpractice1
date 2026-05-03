@@ -1,7 +1,12 @@
-export const ChildArea = () => {
+export const ChildArea = (props) => {
+  const { open } = props;
   return (
     <div>
-      <p>k</p>
+        {open ? (
+        <div>
+          <p>surti</p>
+        </div>
+        ) : null}
     </div>
   );
 };
