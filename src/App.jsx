@@ -10,9 +10,17 @@ export const App = () => {
 
   const handleAnswer = (selectedOption) => {
     const newAnswers = [...answers, selectedOption];
+
+    const isLastQuestion =
+      currentQuestionIndex === questions.length - 1;
+
     setAnswers(newAnswers);
 
-    setCurrentQuestionIndex((prev) => prev + 1);
+    if (isLastQuestion) {
+      setStep(2);
+    } else {
+      setCurrentQuestionIndex((prev) => prev + 1);
+    }
   };
 
   return (
