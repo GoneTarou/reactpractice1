@@ -1,6 +1,6 @@
 import { StartPage } from "./components/StartPage";
 
-const App = () => {
+export const App = () => {
   return (
     <div className="p-4 m-2">
       <StartPage />
@@ -8,4 +8,3 @@ const App = () => {
   );
 };
 
-export default App;
