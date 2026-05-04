@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { StartPage } from "./components/StartPage";
+import { Question } from "./components/Question";
 
 export const App = () => {
-  return (
-    <div className="p-4 m-2">
-      <StartPage />
-    </div>
-  );
+  const [step, setStep] = useState(0);
+    return (
+      <div className="p-4 m-2">
+        {step === 0 && <StartPage onStart={() => setStep(1)} />}
+        {step === 1 && <Question />}
+      </div>
+    );
 };
 
