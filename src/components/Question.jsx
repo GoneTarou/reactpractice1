@@ -14,7 +14,7 @@ export const Question = (props) => {
         <h1>{question.text}</h1>
       </div>
       <div>
-        {question.answers.map((answer) => (
+        {question.options.map((answer) => (
           <AnswerButton
             key={answer.text}
             text={answer.text}

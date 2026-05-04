@@ -6,11 +6,25 @@ import { questions } from "./data/question";
 export const App = () => {
   const [step, setStep] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    return (
-      <div className="p-4 m-2">
-        {step === 0 && <StartPage onStart={() => setStep(1)} />}
-        {step === 1 && <Question />}
-      </div>
-    );
-};
+  const [answers, setAnswers] = useState([]);
 
+  const handleAnswer = (selectedOption) => {
+    const newAnswers = [...answers, selectedOption];
+    setAnswers(newAnswers);
+
+    setCurrentQuestionIndex((prev) => prev + 1);
+  };
+
+  return (
+    <div className="p-4 m-2">
+      {step === 0 && <StartPage onStart={() => setStep(1)} />}
+
+      {step === 1 && (
+        <Question
+          question={questions[currentQuestionIndex]}
+          onAnswer={handleAnswer}
+        />
+      )}
+    </div>
+  );
+};
