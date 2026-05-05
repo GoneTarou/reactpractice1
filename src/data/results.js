@@ -1,23 +1,23 @@
 export const results = [
   {
-    id: 'active_cat',
+    id: 'cat',
     title: 'あなたは活発な猫タイプ！',
     description: '外で遊ぶのが大好きで、いつも元気いっぱい！',
     youtubeId: 'dQw4w9WgXcQ',
-    type: 'active'
+    type: 'neko'
   },
   {
-    id: 'lazy_cat',
+    id: 'dog',
     title: 'あなたはのんびり猫タイプ！',
     description: '家でゴロゴロするのが至福の時間。',
     youtubeId: 'JziDpvsc3Xs',
-    type: 'lazy'
+    type: 'inu'
   },
   {
-    id: 'social_cat',
+    id: 'the others',
     title: 'あなたは社交的な猫タイプ！',
     description: '友達と過ごすのが何より楽しい！',
     youtubeId: 'Jg2SPb-p_fc',
-    type: 'social'
+    type: 'others'
   },
 ];
