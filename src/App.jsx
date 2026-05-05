@@ -24,6 +24,12 @@ export const App = () => {
     }
   };
 
+  const handleRestart = () => {
+    setStep(0);
+    setCurrentQuestionIndex(0);
+    setAnswers([]);
+  };
+
   return (
     <div className="p-4 m-2">
       {step === 0 && <StartPage onStart={() => setStep(1)} />}
@@ -32,6 +38,13 @@ export const App = () => {
         <Question
           question={questions[currentQuestionIndex]}
           onAnswer={handleAnswer}
+        />
+      )}
+
+      {step === 2 && (
+        <ResultPage
+          answers={answers}
+          onRestart={handleRestart}
         />
       )}
     </div>

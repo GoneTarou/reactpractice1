@@ -14,6 +14,8 @@ export const ResultPage = (props) => {
           ))}
         </ul>
       </div>
+
+      <button onClick={onRestart}>もう一度</button>
     </>
   )
 };

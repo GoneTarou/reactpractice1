@@ -13,11 +13,11 @@ export const Question = (props) => {
         <h1>{question.text}</h1>
       </div>
       <div>
-        {question.options.map((answer) => (
+        {question.options.map((option) => (
           <AnswerButton
-            key={answer.text}
-            text={answer.text}
-            onClick={() => onAnswer(answer)}
+            key={option.text}
+            text={option.text}
+            onClick={() => onAnswer(option)}
           />
         ))}
       </div>
