@@ -2,6 +2,7 @@ import { useState } from "react";
 import { StartPage } from "./components/StartPage";
 import { Question } from "./components/Question";
 import { questions } from "./data/question";
+import { ResultPage } from "./components/ResultPage";
 
 export const App = () => {
   const [step, setStep] = useState(0);
