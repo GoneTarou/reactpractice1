@@ -1,6 +1,5 @@
 import { AnswerButton } from "./AnswerButton";
 
-
 export const Question = (props) => {
   const { question, onAnswer } = props;
   console.log(question);
