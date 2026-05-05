@@ -3,7 +3,6 @@ import { StartPage } from "./components/StartPage";
 import { Question } from "./components/Question";
 import { ResultPage } from "./components/ResultPage";
 import { questions } from "./data/question";
-import { calculateScore } from "./utils/calculateScore";
 import { determineResult } from "./utils/determineResult";
 
 export const App = () => {

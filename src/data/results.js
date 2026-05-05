@@ -17,7 +17,7 @@ export const results = [
     id: 'social_cat',
     title: 'あなたは社交的な猫タイプ！',
     description: '友達と過ごすのが何より楽しい！',
-    youtubeId: 'xyz789abc',
+    youtubeId: 'Jg2SPb-p_fc',
     type: 'social'
   },
   {
