@@ -1,22 +1,22 @@
 export const results = [
   {
     id: 'cat',
-    title: 'あなたは活発な猫タイプ！',
-    description: '外で遊ぶのが大好きで、いつも元気いっぱい！',
-    youtubeId: 'lyrzrAZFZUE',
+    title: 'Chipi Chipi Chapa Chapa cat',
+    description: 'そんなあなたには踊る猫がおすすめです',
+    youtubeId: 'kYWFJzNz3Es',
     type: 'neko'
   },
   {
     id: 'dog',
-    title: 'あなたはのんびり猫タイプ！',
-    description: '家でゴロゴロするのが至福の時間。',
+    title: 'DJ cat',
+    description: 'そんなあなたにはDJ猫がおすすめです',
     youtubeId: 'w1h_UuOGNx4',
     type: 'inu'
   },
   {
-    id: 'the others',
-    title: 'あなたは社交的な猫タイプ！',
-    description: '友達と過ごすのが何より楽しい！',
+    id: 'the other',
+    title: 'Goat talking',
+    description: 'そんなあなたには捲し立てるヤギがおすすめです',
     youtubeId: 'vtC8kiC6F10',
     type: 'others'
   },

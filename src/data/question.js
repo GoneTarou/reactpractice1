@@ -12,18 +12,18 @@ export const questions = [
     id: 2,
     text: "嬉しそうなのが好き？それとも悲しそうなのが好き？",
     options: [
-      { text: "嬉しそう", type: "neko" },
-      { text: "悲しそう", type: "inu" },
+      { text: "嬉しそうな猫", type: "neko" },
+      { text: "悲しそうな猫", type: "inu" },
       { text: "どちらでもない", type: "others" },
     ]
   },
   {
     id: 3,
-    text: "夜は何時に寝る？",
+    text: "猫は好き？",
     options: [
-      { text: "21時前", type: "neko" },
-      { text: "22-23時", type: "inu" },
-      { text: "24時以降", type: "others" },
+      { text: "はい", type: "neko" },
+      { text: "いいえ", type: "others" },
+      { text: "どちらもでない", type: "others" },
     ]
   }
 ];
