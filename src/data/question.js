@@ -10,7 +10,7 @@ export const questions = [
   },
   {
     id: 2,
-    text: "嬉しそうなのが好き？それとも悲しそうなのが好き？",
+    text: "嬉しそうな猫が好き？それとも悲しそうな猫が好き？",
     options: [
       { text: "嬉しそうな猫", type: "neko" },
       { text: "悲しそうな猫", type: "inu" },
