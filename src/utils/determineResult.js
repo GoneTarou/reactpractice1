@@ -7,15 +7,14 @@ export const determineResult = (answers) => {
     counts[a.type] = (counts[a.type] || 0) + 1;
   });
 
-  let maxType = null;
-  let maxCount = 0;
+  const maxCount = Math.max(...Object.values(counts));
 
-  for (const type in counts) {
-    if (counts[type] > maxCount) {
-      maxCount = counts[type];
-      maxType = type;
-    }
-  }
+  const topTypes = Object.keys(counts).filter(
+    (type) => counts[type] === maxCount
+  );
 
-  return results.find(r => r.type === maxType);
+  const selectedType =
+    topTypes[Math.floor(Math.random() * topTypes.length)];
+
+  return results.find((r) => r.type === selectedType);
 };

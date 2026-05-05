@@ -1,20 +1,20 @@
 export const questions = [
   {
     id: 1,
-    text: "猫と犬どっちが好きですか？",
+    text: "どんな猫がすき？",
     options: [
-      { text: "猫", type: "neko" },
-      { text: "犬", type: "inu" },
+      { text: "かわいい猫", type: "neko" },
+      { text: "かっこいい猫", type: "inu" },
       { text: "それ以外", type: "others" },
     ]
   },
   {
     id: 2,
-    text: "好きな食べ物は？",
+    text: "嬉しそうなのが好き？それとも悲しそうなのが好き？",
     options: [
-      { text: "魚", type: "neko" },
-      { text: "肉", type: "inu" },
-      { text: "野菜", type: "others" },
+      { text: "嬉しそう", type: "neko" },
+      { text: "悲しそう", type: "inu" },
+      { text: "どちらでもない", type: "others" },
     ]
   },
   {
