@@ -4,7 +4,6 @@ export const ResultPage = ({ result, onRestart }) => {
       <h2>{result.title}</h2>
       <p>{result.description}</p>
 
-      {/* 👇 YouTube埋め込み */}
       <div style={{ marginTop: "20px" }}>
         <iframe
           width="560"
@@ -17,7 +16,7 @@ export const ResultPage = ({ result, onRestart }) => {
         ></iframe>
       </div>
 
-      <button onClick={onRestart}>もう一度</button>
+      <button onClick={onRestart}>もう一度診断する</button>
     </div>
   );
 };

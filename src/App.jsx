@@ -20,11 +20,7 @@ export const App = () => {
     setAnswers(newAnswers);
 
     if (isLastQuestion) {
-      // スコア計算 → 結果判定
       const finalResult = determineResult(newAnswers);
-
-      console.log('回答:', newAnswers);
-      console.log('判定結果:', finalResult);
 
       setResult(finalResult);
       setStep(2);

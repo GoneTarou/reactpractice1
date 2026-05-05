@@ -7,7 +7,7 @@ export const Question = (props) => {
   if (!question) return null;
 
   return (
-    <div className="min-h-screen bg-orange-50 py-8 px-4">
+    <div className="min-h-screen bg-gray py-8 px-4">
       <div>
         <h1>{question.text}</h1>
       </div>

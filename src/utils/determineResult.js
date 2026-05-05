@@ -17,6 +17,5 @@ export const determineResult = (answers) => {
     }
   }
 
-  // 👇ここが重要
   return results.find(r => r.type === maxType);
 };

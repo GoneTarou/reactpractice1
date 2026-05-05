@@ -4,7 +4,7 @@ export const results = [
     title: 'あなたは活発な猫タイプ！',
     description: '外で遊ぶのが大好きで、いつも元気いっぱい！',
     youtubeId: 'dQw4w9WgXcQ',
-    type: 'active'  // ← scoreCondition を type に変更
+    type: 'active'
   },
   {
     id: 'lazy_cat',
@@ -20,11 +20,4 @@ export const results = [
     youtubeId: 'Jg2SPb-p_fc',
     type: 'social'
   },
-  {
-    id: 'focused_cat',
-    title: 'あなたは職人気質な猫タイプ！',
-    description: '一人で集中するのが好き。自分の世界を大切にします。',
-    youtubeId: 'def456ghi',
-    type: 'focused'
-  }
 ];
