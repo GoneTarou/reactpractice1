@@ -1,21 +1,23 @@
-export const ResultPage = (props) => {
-  const { answers, onRestart } = props;
-
+export const ResultPage = ({ result, onRestart }) => {
   return (
-    <>
-      <h2>診断結果</h2>
-      <div>
-        <h3>あなたの回答</h3>
-        <ul>
-          {answers.map((answer, index) => (
-            <li key={index}>
-              質問{index + 1}: {answer.text}
-            </li>
-          ))}
-        </ul>
+    <div>
+      <h2>{result.title}</h2>
+      <p>{result.description}</p>
+
+      {/* 👇 YouTube埋め込み */}
+      <div style={{ marginTop: "20px" }}>
+        <iframe
+          width="560"
+          height="315"
+          src={`https://www.youtube.com/embed/${result.youtubeId}`}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
 
       <button onClick={onRestart}>もう一度</button>
-    </>
-  )
+    </div>
+  );
 };

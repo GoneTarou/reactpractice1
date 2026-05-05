@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { StartPage } from "./components/StartPage";
 import { Question } from "./components/Question";
-import { questions } from "./data/question";
 import { ResultPage } from "./components/ResultPage";
+import { questions } from "./data/question";
+import { calculateScore } from "./utils/calculateScore";
+import { determineResult } from "./utils/determineResult";
 
 export const App = () => {
   const [step, setStep] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [result, setResult] = useState(null);
 
   const handleAnswer = (selectedOption) => {
     const newAnswers = [...answers, selectedOption];
@@ -18,6 +21,13 @@ export const App = () => {
     setAnswers(newAnswers);
 
     if (isLastQuestion) {
+      // スコア計算 → 結果判定
+      const finalResult = determineResult(newAnswers);
+
+      console.log('回答:', newAnswers);
+      console.log('判定結果:', finalResult);
+
+      setResult(finalResult);
       setStep(2);
     } else {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -28,6 +38,7 @@ export const App = () => {
     setStep(0);
     setCurrentQuestionIndex(0);
     setAnswers([]);
+    setResult(null);
   };
 
   return (
@@ -41,9 +52,9 @@ export const App = () => {
         />
       )}
 
-      {step === 2 && (
+      {step === 2 && result && (
         <ResultPage
-          answers={answers}
+          result={result}
           onRestart={handleRestart}
         />
       )}
